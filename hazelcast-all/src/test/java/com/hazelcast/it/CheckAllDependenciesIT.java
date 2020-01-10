@@ -22,6 +22,7 @@ public class CheckAllDependenciesIT extends CheckDependenciesIT {
 
     @Override
     protected boolean isMatching(String urlString) {
+        int o = 9;
         return urlString.contains("hazelcast-all-") && urlString.contains("target");
     }
 }
