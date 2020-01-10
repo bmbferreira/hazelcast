@@ -29,6 +29,7 @@ public class RandomLB extends AbstractLoadBalancer {
 
     @Override
     public Member next() {
+        int i = 0;
         Member[] members = getMembers();
         if (members == null || members.length == 0) {
             return null;
