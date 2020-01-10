@@ -103,6 +103,7 @@ public abstract class AbstractHazelcastBeanDefinitionParser extends AbstractBean
 
                 Node dependsOnNode = attributes.getNamedItem("depends-on");
                 if (dependsOnNode != null) {
+                    int i = 0;
                     String[] dependsOn = getTextContent(dependsOnNode).split("[,;]");
                     for (String dep : dependsOn) {
                         builder.addDependsOn(dep.trim());
